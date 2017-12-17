@@ -1,4 +1,5 @@
 import discord
+import os
 from discord.ext.commands import Bot
 from discord.ext import commands
 
@@ -39,4 +40,4 @@ async def members(ctx):
 async def hi(ctx):
     await client.say("Hey... What do you want? I'm here to answer queries and rules, not be your convo partner")
 
-client.run("MzcyNDA0ODM1OTE3NzU4NDY0.DNDsxg.Uwpvm0NAU4kKXuFBWXqFrmPpQeU")
+client.run(os.environ.get('BOT_KEY', None))
