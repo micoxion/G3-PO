@@ -17,11 +17,6 @@ async def on_ready():
     print("ID: ()" + client.user.id)
     await client.send_message(client.get_channel('371880461900840975'), "G3-PO is online.")
 
-def speach_commands(command: str, message: str):
-    eval("@client.command(pass_context=True) \n\tasync def " + command + "(ctx): \n\tawait client.say("+ message +")")
-
-speach_commands("test", "it works your welcome")
-
 @client.command(pass_context=True)
 async def rules(ctx):
     await client.say("Do we really need to say this? Don't be a jerk if you don't want to be kicked. Otherwise, have fun, and may your own goals ever be better than your normal shots.")
