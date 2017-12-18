@@ -2,10 +2,12 @@ import discord
 import os
 from discord.ext.commands import Bot
 from discord.ext import commands
+from dotenv import load_dotenv, find_dotenv
 
 Client = discord.Client()
 bot_prefix = "!"
 client = commands.Bot(command_prefix = bot_prefix)
+load_dotenv(find_dotenv(), override=True)
 
 @client.event
 async def on_ready():
@@ -40,4 +42,5 @@ async def members(ctx):
 async def hi(ctx):
     await client.say("Hey... What do you want? I'm here to answer queries and rules, not be your convo partner")
 
-client.run(os.getenv('BOT_KEY'))
+print(os.environ.get("BOT_KEY"))
+client.run(os.evniron.get("BOT_KEY"))
