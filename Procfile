@@ -1,1 +1,1 @@
-web: python g3po.py
+worker: python g3po.py
