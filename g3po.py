@@ -42,5 +42,4 @@ async def members(ctx):
 async def hi(ctx):
     await client.say("Hey... What do you want? I'm here to answer queries and rules, not be your convo partner")
 
-print(os.environ.get("BOT_KEY"))
-client.run(os.evniron.get("BOT_KEY"))
+client.run(os.environ.get("BOT_KEY"))
