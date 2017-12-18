@@ -18,8 +18,7 @@ async def on_ready():
     await client.send_message(client.get_channel('371880461900840975'), "G3-PO is online.")
 
 def speach_commands(command: str, message: str):
-
-    eval("@client.command(pass_context=True) \n async def " + command + "(ctx): \nawait client.say("+ message +")")
+    eval("@client.command(pass_context=True) \n\tasync def " + command + "(ctx): \n\tawait client.say("+ message +")")
 
 speach_commands("test", "it works your welcome")
 
