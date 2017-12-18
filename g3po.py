@@ -15,7 +15,7 @@ async def on_ready():
     print("Bot online.")
     print("Name: ()" + client.user.name)
     print("ID: ()" + client.user.id)
-    await client.send_message(client.get_channel('371880461900840975'), "G3-PO is online.")
+    await client.send_message(client.get_channel('371880461900840975'), "Hello, I am G3-PO, human rocket league relations. How may I help you?")
 
 @client.command(pass_context=True)
 async def rules(ctx):
