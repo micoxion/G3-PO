@@ -18,6 +18,10 @@ async def on_ready():
     print("ID: ()" + g3po.user.id)
     await g3po.send_message(g3po.get_channel('371880461900840975'), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
 
+@g3po.commadn(pass_context=True)
+async def meow(ctx):
+    await g3po.say("Coming soon!")
+
 @g3po.command(pass_context=True)
 async def rules(ctx):
     await g3po.say("Do we really need to say this? Don't be a jerk if you don't want to be kicked. Otherwise, have fun, and may your own goals ever be better than your normal shots.")
