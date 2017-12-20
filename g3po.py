@@ -16,7 +16,7 @@ async def on_ready():
     print("Bot online.")
     print("Name: ()" + g3po.user.name)
     print("ID: ()" + g3po.user.id)
-    await g3po.send_message(g3po.get_channel('371880461900840975'), "Hello, I am G3-PO, human rocket league relations. How may I help you?")
+    await g3po.send_message(g3po.get_channel('371880461900840975'), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
 
 @g3po.command(pass_context=True)
 async def rules(ctx):
