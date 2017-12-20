@@ -24,7 +24,7 @@ async def rules(ctx):
 
 @g3po.command(pass_context=True)
 async def join(ctx):
-    await g3po.say("If you're here you are probably apart of G3 already... If not, feel free to try out and play with us. If we like you, we will (in a totally objective manner) have you join the team!")
+    await g3po.say("Once you hit Gold 3 or higher, you can request to join! \n We'll play some games with you, and see how your... \'Synergy\' is :wink:392835780898193408")
 
 @g3po.command(pass_context=True)
 async def youtube(ctx):
@@ -32,11 +32,11 @@ async def youtube(ctx):
 
 @g3po.command(pass_context=True)
 async def members(ctx):
-    await g3po.say("SirOxion: Founder and owner")
-    await g3po.say("Coolio: Co-Founder and Co-owner")
-    await g3po.say("GummyJbear: An original G3 member")
-    await g3po.say("Hockeykid33: A new aspiring G3 member")
-    await g3po.say("Kronoby: A G3 member")
+    await g3po.say("SirOxion: G3 Founder and owner")
+    await g3po.say("Coolio: G3 Co-Founder and Co-owner")
+    await g3po.say("GummyJbear: G3 Founder (not active much)")
+    await g3po.say("Hockeykid33: G3 member")
+    await g3po.say("DubsOnIce: G3 member")
     await g3po.say("Syna: Graphic designer, and member")
 
 @g3po.command(pass_context=True)
