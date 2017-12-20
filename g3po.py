@@ -40,14 +40,6 @@ async def members(ctx):
     await g3po.say("Syna: Graphic designer, and member")
 
 @g3po.command(pass_context=True)
-async def goodmorning(ctx):
-    cur_time = datetime.datetime.now()
-    if cur_time <= datetime.datetime(cur_time.year, cur_time.month, cur_time.day, 12):
-        await g3po.say("Good morning")
-    else:
-        await g3po.say("Someones a little too tired today")
-
-@g3po.command(pass_context=True)
 async def hi(ctx):
     await g3po.say("Hey... What do you want? I'm here to answer queries and rules, not be your convo partner")
 
