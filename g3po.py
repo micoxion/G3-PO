@@ -24,7 +24,7 @@ async def rules(ctx):
 
 @g3po.command(pass_context=True)
 async def join(ctx):
-    await g3po.say("Once you hit Gold 3 or higher, you can request to join! \n We'll play some games with you, and see how your... \'Synergy\' is :wink:")
+    await g3po.say("Once you hit Gold 3 or higher, you can request to join! \nWe'll play some games with you, and see how your... \'Synergy\' is :wink:")
 
 @g3po.command(pass_context=True)
 async def youtube(ctx):

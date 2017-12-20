@@ -17,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/g3po.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="26" column="152" lean-forward="false" selection-start-line="26" selection-start-column="152" selection-end-line="26" selection-end-column="152" />
+              <caret line="26" column="78" lean-forward="true" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -407,7 +407,7 @@
     <entry file="file://$PROJECT_DIR$/g3po.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="26" column="152" lean-forward="false" selection-start-line="26" selection-start-column="152" selection-end-line="26" selection-end-column="152" />
+          <caret line="26" column="78" lean-forward="true" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
