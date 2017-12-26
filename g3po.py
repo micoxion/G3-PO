@@ -23,9 +23,10 @@ async def on_ready():
 async def on_message(message):
     if message.author != g3po.user:
         if "i\'m" in message.content.lower():
-            await g3po.send_message(g3po.get_channel('371880461900840975'), "Hi " +
-                                    message.content[message.content.lower().find("\'m") + 3: len(message.content)] +
-                                    "! I'm G3-PO")
+            if len(message.content[message.content.lower().find("i\'m") + 3:]) > 0:
+                await g3po.send_message(g3po.get_channel('371880461900840975'), "Hi " +
+                                        message.content[message.content.lower().find("i\'m") + 4: len(message.content)] +
+                                        "! I'm G3-PO")
 
 
 @g3po.command(pass_context=True)
