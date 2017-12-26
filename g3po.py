@@ -27,7 +27,8 @@ async def on_message(message):
                 await g3po.send_message(g3po.get_channel('371880461900840975'), "Hi " +
                                         message.content[message.content.lower().find("i\'m") + 4: len(message.content)] +
                                         "! I'm G3-PO")
-
+            else:
+                await g3po.send_message(g3po.get_channel('371880461900840975'), message.author.name + ", you're what?!")
 
 @g3po.command(pass_context=True)
 async def meow(ctx):
