@@ -19,6 +19,15 @@ async def on_ready():
     print("ID: ()" + g3po.user.id)
     await g3po.send_message(g3po.get_channel('371880461900840975'), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
 
+@g3po.event
+async def on_message(message):
+    if message.author != g3po.user:
+        if "i\'m" in message.content.lower():
+            await g3po.send_message(g3po.get_channel('371880461900840975'), "Hi " +
+                                    message.content[message.content.lower().find("\'m") + 3: len(message.content)] +
+                                    "! I'm G3-PO")
+
+
 @g3po.command(pass_context=True)
 async def meow(ctx):
     await g3po.say("Coming soon!")
