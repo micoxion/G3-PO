@@ -1,6 +1,6 @@
 import discord
-import datetime
-import google
+from urllib import request
+from bs4 import BeautifulSoup
 import os
 from discord.ext.commands import Bot
 from discord.ext import commands
@@ -11,24 +11,17 @@ bot_prefix = "!"
 g3po = commands.Bot(command_prefix = bot_prefix)
 load_dotenv(find_dotenv(), override=True)
 
+bot_dev = '395402947292561410'
+g3_team = '371880461900840975'
+
 @g3po.event
 async def on_ready():
     print("Booting up...")
     print("Bot online.")
     print("Name: ()" + g3po.user.name)
     print("ID: ()" + g3po.user.id)
-    await g3po.send_message(g3po.get_channel('371880461900840975'), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
-
-@g3po.event
-async def on_message(message):
-    if message.author != g3po.user:
-        if "i\'m" in message.content.lower():
-            if len(message.content[message.content.lower().find("i\'m") + 3:]) > 0:
-                await g3po.send_message(g3po.get_channel('371880461900840975'), "Hi " +
-                                        message.content[message.content.lower().find("i\'m") + 4: len(message.content)] +
-                                        "! I'm G3-PO")
-            else:
-                await g3po.send_message(g3po.get_channel('371880461900840975'), message.author.name + ", you're what?!")
+    await g3po.send_message(g3po.get_channel(g3_team), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
+    #await g3po.send_message(g3po.get_channel(bot_dev), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
 
 @g3po.command(pass_context=True)
 async def meow(ctx):
@@ -49,7 +42,7 @@ async def youtube(ctx):
 @g3po.command(pass_context=True)
 async def members(ctx):
     await g3po.say("SirOxion: G3 Founder and owner")
-    await g3po.say("Coolio: G3 Co-Founder and Co-owner")
+    await g3po.say("Coolio (a.k.a Coolaid): G3 Co-Founder and Co-owner")
     await g3po.say("GummyJbear: G3 Founder (not active much)")
     await g3po.say("Hockeykid33: G3 member")
     await g3po.say("DubsOnIce: G3 member")
@@ -58,5 +51,18 @@ async def members(ctx):
 @g3po.command(pass_context=True)
 async def hi(ctx):
     await g3po.say("Hey... What do you want? I'm here to answer queries and rules, not be your convo partner")
+
+@g3po.event
+async def on_message(message):
+    if message.author != g3po.user:
+        if "i\'m" in message.content.lower():
+            if len(message.content[message.content.lower().find("i\'m") + 3:]) > 0:
+                await g3po.send_message(g3po.get_channel('371880461900840975'), "Hi " +
+                                        message.content[message.content.lower().find("i\'m") + 4: len(message.content)] +
+                                        "! I'm G3-PO")
+            else:
+                await g3po.send_message(g3po.get_channel('371880461900840975'), message.author.name + ", you're what?!")
+
+    await g3po.process_commands(message)
 
 g3po.run(os.environ.get("BOT_KEY"))
