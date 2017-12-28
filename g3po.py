@@ -52,16 +52,24 @@ async def members(ctx):
 async def hi(ctx):
     await g3po.say("Hey... What do you want? I'm here to answer queries and rules, not be your convo partner")
 
+@g3po.command(pass_context=True)
+async def commands(ctx):
+    await g3po.say("!tourney: in development, will give the ability to recieve faceit tourney info from me.\n" +
+                   "Based on either 1s, 2s, or 3s\n\n!meow: requested by syna himself and comming soon\n\n" +
+                   "!rules: the rules... what did you expect?\n\n!join: a little info on our new member procedure\n\n" +
+                   "!youtube: just our youtube link... GO CHECK IT OUT!\n\n" +
+                   "!members: a list of official G3 members barring subs")
+
 @g3po.event
 async def on_message(message):
     if message.author != g3po.user:
         if "i\'m" in message.content.lower():
             if len(message.content[message.content.lower().find("i\'m") + 3:]) > 0:
-                await g3po.send_message(g3po.get_channel('371880461900840975'), "Hi " +
+                await g3po.send_message(message.channel, "Hi " +
                                         message.content[message.content.lower().find("i\'m") + 4: len(message.content)] +
                                         "! I'm G3-PO")
             else:
-                await g3po.send_message(g3po.get_channel('371880461900840975'), message.author.name + ", you're what?!")
+                await g3po.send_message(message.channel, message.author.name + ", you're what?!")
 
     await g3po.process_commands(message)
 
