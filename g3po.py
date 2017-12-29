@@ -14,6 +14,10 @@ load_dotenv(find_dotenv(), override=True)
 bot_dev = '395402947292561410'
 g3_team = '371880461900840975'
 
+super_user = '331634391790911488'
+
+im_active = True
+
 @g3po.event
 async def on_ready():
     print("Booting up...")
@@ -22,6 +26,12 @@ async def on_ready():
     print("ID: ()" + g3po.user.id)
     await g3po.send_message(g3po.get_channel(g3_team), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
     #await g3po.send_message(g3po.get_channel(bot_dev), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
+
+
+
+@g3po.command(pass_context=True)
+async def gamer_spam(ctx):
+    await g3po.say("The \"Gamer\" who's spamming Coolio -- Seen Live Kappa\nhttps://giphy.com/gifs/break-free-HTZVeK0esRjyw ")
 
 @g3po.command(pass_context=True)
 async def meow(ctx):
@@ -63,13 +73,14 @@ async def commands(ctx):
 @g3po.event
 async def on_message(message):
     if message.author != g3po.user:
-        if "i\'m" in message.content.lower():
-            if len(message.content[message.content.lower().find("i\'m") + 3:]) > 0:
-                await g3po.send_message(message.channel, "Hi " +
-                                        message.content[message.content.lower().find("i\'m") + 4: len(message.content)] +
-                                        "! I'm G3-PO")
-            else:
-                await g3po.send_message(message.channel, message.author.name + ", you're what?!")
+        if im_active:
+            if "i\'m" in message.content.lower():
+                if len(message.content[message.content.lower().find("i\'m") + 3:]) > 0:
+                    await g3po.send_message(message.channel, "Hi " +
+                                            message.content[message.content.lower().find("i\'m") + 4: len(message.content)] +
+                                            "! I'm G3-PO")
+                else:
+                    await g3po.send_message(message.channel, message.author.name + ", you're what?!")
 
     await g3po.process_commands(message)
 
