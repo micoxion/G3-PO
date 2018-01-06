@@ -27,7 +27,16 @@ async def on_ready():
     await g3po.send_message(g3po.get_channel(g3_team), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
     #await g3po.send_message(g3po.get_channel(bot_dev), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
 
+@g3po.command(pass_context=True)
+async def syna_n_g3(ctx):
+    await g3po.say("https://media.discordapp.net/attachments/371880461900840975/396160765297426452/Syna__G3.png?width=1248&height=702")
 
+@g3po.command(pass_context=True)
+async def toggle_im(ctx):
+    global im_active
+    print(im_active)
+    if (ctx.message.author.id == super_user):
+        im_active = not im_active
 
 @g3po.command(pass_context=True)
 async def gamer_spam(ctx):
