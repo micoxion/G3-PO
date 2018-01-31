@@ -83,7 +83,9 @@ async def commands(ctx):
 async def on_message(message):
     if message.author != g3po.user:
         if im_active:
-            if "i\'m" in message.content.lower():
+            if "i\'m g3-po" in message.content.lower():
+                await g3po.send_message(message.channel, "Okay, I'm not that dumb...")
+            elif "i\'m" in message.content.lower():
                 if len(message.content[message.content.lower().find("i\'m") + 3:]) > 0:
                     await g3po.send_message(message.channel, "Hi " +
                                             message.content[message.content.lower().find("i\'m") + 4: len(message.content)] +
