@@ -25,11 +25,7 @@ async def on_ready():
     print("Bot online.")
     print("Name: ()" + g3po.user.name)
     print("ID: ()" + g3po.user.id)
-    await g3po.send_message(g3po.get_channel(g3_team), "G3-PO, rocket league cyborg relations. Rebooting...")
-    await g3po.send_message(g3po.get_channel(g3_team), randint(20, 40) + "%")
-    await g3po.send_message(g3po.get_channel(g3_team), randint(50, 70) + "%")
-    await g3po.send_message(g3po.get_channel(g3_team), randint(75, 99) + "%")
-    await g3po.send_message(g3po.get_channel(g3_team), "Online...")
+    await g3po.send_message(g3po.get_channel(g3_team), "G3-PO, rocket league cyborg relations. Rebooting...\n" + randint(20, 40) + "%\n" + randint(50, 70) + "%\n" + randint(75, 99) + "%\nOnline...")
     #await g3po.send_message(g3po.get_channel(g3_team), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
     #await g3po.send_message(g3po.get_channel(bot_dev), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
 
