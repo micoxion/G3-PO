@@ -25,7 +25,7 @@ async def on_ready():
     print("Bot online.")
     print("Name: ()" + g3po.user.name)
     print("ID: ()" + g3po.user.id)
-    await g3po.send_message(g3po.get_channel(g3_team), "G3-PO, rocket league cyborg relations. Rebooting...\n" + randint(20, 40) + "%\n" + randint(50, 70) + "%\n" + randint(75, 99) + "%\nOnline...")
+    await g3po.send_message(g3po.get_channel(g3_team), "G3-PO, rocket league cyborg relations. Rebooting...")
     #await g3po.send_message(g3po.get_channel(g3_team), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
     #await g3po.send_message(g3po.get_channel(bot_dev), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
 
@@ -54,7 +54,7 @@ async def rules(ctx):
 
 @g3po.command(pass_context=True)
 async def join(ctx):
-    await g3po.say("Once you hit Gold 3 or higher, you can request to join! \nWe'll play some games with you, and see how your... \'Synergy\' is :wink:")
+    await g3po.say("Once you hit Plat 3 or higher, you can request to join! \nWe'll play some games with you, and see how your... \'Synergy\' is :wink:")
 
 @g3po.command(pass_context=True)
 async def youtube(ctx):
