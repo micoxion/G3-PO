@@ -25,7 +25,7 @@ async def on_ready():
     print("Bot online.")
     print("Name: ()" + g3po.user.name)
     print("ID: ()" + g3po.user.id)
-    await g3po.send_message(g3po.get_channel(g3_team), "G3-PO, rocket league cyborg relations. Rebooting...")
+    #await g3po.send_message(g3po.get_channel(g3_team), "G3-PO, rocket league cyborg relations. Rebooting...")
     #await g3po.send_message(g3po.get_channel(g3_team), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
     #await g3po.send_message(g3po.get_channel(bot_dev), "Hello, I am G3-PO, rocket league cyborg relations. How may I help you?")
 
@@ -62,11 +62,9 @@ async def youtube(ctx):
 
 @g3po.command(pass_context=True)
 async def members(ctx):
-    await g3po.say("SirOxion: G3 Founder and owner")
-    await g3po.say("Coolio (a.k.a Coolaid): G3 Co-Founder and Co-owner")
-    await g3po.say("GummyJbear: G3 Founder (not active much)")
-    await g3po.say("Hockeykid33: G3 member")
-    await g3po.say("DubsOnIce: G3 member")
+    await g3po.say("SirOxion: OGS Founder and owner, now head of CRMY RL division")
+    await g3po.say("Coolio (a.k.a Coolaid): OGS Co-Founder and co-head of CRMY RL division")
+    await g3po.say("Hockeykid33: OG OGS member and CRMY RL division member")
     await g3po.say("Syna: Graphic designer, and member")
 
 @g3po.command(pass_context=True)
@@ -79,7 +77,7 @@ async def commands(ctx):
                    "Based on either 1s, 2s, or 3s\n\n!meow: requested by syna himself and comming soon\n\n" +
                    "!rules: the rules... what did you expect?\n\n!join: a little info on our new member procedure\n\n" +
                    "!youtube: just our youtube link... GO CHECK IT OUT!\n\n" +
-                   "!members: a list of official G3 members barring subs")
+                   "!members: a list of official CRMY RL members barring subs")
 
 @g3po.event
 async def on_message(message):
